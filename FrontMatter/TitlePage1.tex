@@ -1,0 +1,75 @@
+
+% Produce the title page
+
+\addtolength{\topmargin}{0.5in}
+\thispagestyle{empty}
+
+
+\begin{center}
+\begin{spacing}{1.0}
+  \includegraphics[width=.4\textwidth]{FrontMatter/Figures/Santa Clara University.png}   
+  
+  \begin{large}
+    \textbf{\titlecap{\tuniversity}} \\
+    \textbf{\titlecap{\tdepartment}} \\~\\
+   \end{large}
+
+   \hfill Date: \tdateSubmitted \\~\\~\\
+
+I HEREBY RECOMMEND THAT THE THESIS PREPARED UNDER MY SUPERVISION BY \\~\\
+
+\begin{large}
+\textbf{\tstudents} \\~\\
+\end{large}
+
+ENTITLED\\~\\
+
+\begin{large}
+\textbf{\ttitle} \\~\\
+\end{large}
+
+BE ACCEPTED IN PARTIAL FULFILLMENT OF THE REQUIREMENTS FOR THE DEGREE \\~\\
+
+OF \\~\\
+
+\textbf{\MakeUppercase{\tdegree}} \textbf{IN} \textbf{\MakeUppercase{\tdepartment}} \\~\\
+\end{spacing}
+\end{center}
+
+\newcommand{\thesisadvisors}[1]{
+    \begin{FlushRight} 
+    \begin{singlespace}   
+    I certify that I have read this dissertation and that, in my opinion, it is fully adequate in scope and quality as a dissertation for the degree of \titlecap{\tdegree}. \\[1in]
+    \textbf{#1} \\
+    Date: \tdateSubmitted\     
+    \end{singlespace}
+    \end{FlushRight}    
+}
+
+\newcommand{\clearpagemaketitle}{
+   \clearpage
+    \thispagestyle{empty}
+    \begin{center}
+        \includegraphics[width=.4\textwidth]{FrontMatter/Figures/Santa Clara University second logo.png} 
+    
+    \begin{large}
+        \textbf{\titlecap{\tuniversity}} \\
+        \textbf{\titlecap{\tdepartment}} \\~\\
+    \end{large}
+    \end{center}
+   
+}
+
+% Need help optimizing this part
+\clearpagemaketitle
+\thesisadvisors{Principal Advisor}
+\thesisadvisors{Additional Advisor 1}
+\thesisadvisors{Additional Advisor 2}
+
+\clearpagemaketitle
+\thesisadvisors{Additional Advisor 3}
+\thesisadvisors{Additional Advisor 4}
+\thesisadvisors{Additional Advisor 5}
+
+\clearpagemaketitle
+\thesisadvisors{Chairman of the \titlecap{\tdepartment}}

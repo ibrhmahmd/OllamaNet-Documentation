@@ -1,0 +1,70 @@
+\documentclass[oneside,12pt]{book}
+% Start of Change This section
+\usepackage{textcase}
+
+\newcommand{\pdfauthor}{
+pdfauthor
+}
+
+\newcommand{\ttitle}{Project Title}
+
+\newcommand{\tstudents}{
+   Omar Hassan Mahmoud El-Sayed \\
+   Sara Ahmed Mostafa Ali \\
+   Youssef Tarek Ibrahim Saad \\
+   Mona Gamal Fathy Hassan \\
+   Karim Mohamed Abdelrahman Salem
+}
+\newcommand{\tsupervisors}{
+    Ass. Prof. Ayman Mahmoud Abdelaziz Khalil \\
+    Dr. Laila Mohamed Fathy El-Shenawy
+}
+
+\newcommand{\tuniversity}{Kafr El-Sheikh University}
+\newcommand{\tinstitution}{Faculty of Computers and Information}
+\newcommand{\tdepartment}{Information Systems}
+\newcommand{\tkeywords}{your, keywords, go, here}
+
+\newcommand{\tdaySubmitted}{DAY}
+
+\newcommand{\tmonthSubmitted}{June}
+
+\newcommand{\tyearSubmitted}{2025}
+
+\newcommand{\tdateSubmitted}{\tmonthSubmitted\ \tdaySubmitted, \tyearSubmitted}
+
+\newcommand{\tmonthAndYearSubmitted}{\tmonthSubmitted\ \tyearSubmitted}
+
+\newcommand{\disserationlink}{https://sites.google.com/view/hmi2lab/home}
+
+\newcommand{\copyrightauthor}{HMI$^2$ Laboratory, \tinstitution}
+
+\newcommand{\copyrightauthorlink}{https://sites.google.com/view/hmi2lab/home}
+
+\newcommand{\tdoctype}{Project Report}
+
+\newcommand{\tdegree}{BSc.}
+
+% END Of Change This section
+\newcommand{\tReferenceStyle}{IEEEtran}
+\input{LaTeX/packages}
+\input{LaTeX/layout}
+\input{LaTeX/commands}
+\begin{document}
+\pagestyle{fancy}
+\include{FrontMatter/FrontMatter}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{#1}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+\lhead[\fancyplain{}{\thepage}]{\fancyplain{}{\nouppercase\rightmark}}
+\rhead[\fancyplain{}{\nouppercase\leftmark}]{\fancyplain{}{\thepage}} \cfoot{}
+\renewcommand{\headrulewidth}{0.5pt}
+
+% chapters
+% \include{Chapter01/Chapter01}
+% \cleardoublepage
+
+\bibliographystyle{\tReferenceStyle}
+\bibliography{BibTeX/library,BibTeX/comprehensive}
+\appendix
+\include{Appendix/MainAppendix}
+\end{document}
