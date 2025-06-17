@@ -48,6 +48,18 @@ pdfauthor
 % END Of Change This section
 \newcommand{\tReferenceStyle}{IEEEtran}
 \input{LaTeX/packages}
+
+% Custom environments
+\newmdenv[
+  linewidth=0.5pt,
+  frametitle={Terminology},
+  frametitlefont=\normalfont\bfseries,
+  backgroundcolor=gray!10,
+  roundcorner=4pt,
+  skipabove=7pt,
+  skipbelow=7pt
+]{terminology}
+
 \input{LaTeX/layout}
 \input{LaTeX/commands}
 \begin{document}
@@ -60,8 +72,16 @@ pdfauthor
 \renewcommand{\headrulewidth}{0.5pt}
 
 % chapters
-% \include{Chapter01/Chapter01}
-% \cleardoublepage
+\include{Chapter01/Chapter01}
+\cleardoublepage
+\include{Chapter02/Chapter02}
+\cleardoublepage
+\include{Chapter03/Chapter03}
+\cleardoublepage
+\include{Chapter04/Chapter04}
+\cleardoublepage
+\include{Chapter05/Chapter05}
+\cleardoublepage
 
 \bibliographystyle{\tReferenceStyle}
 \bibliography{BibTeX/library,BibTeX/comprehensive}

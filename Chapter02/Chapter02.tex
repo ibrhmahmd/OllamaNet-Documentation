@@ -1,12 +1,357 @@
 \def\chapdir{./Chapter02}
 
-\chapter{Introduction} \label{ch:Chapter02}
+\chapter{Background \& Literature Review} \label{ch:background}
 
+\section{Theoretical Background}
 
-\section{Section in Introduction}
+The OllamaNet platform is built on several key theoretical foundations that inform its architecture and design:
 
+\subsection{Microservices Architecture}
 
-\subsection{Subsection in Introduction}
+Microservices architecture represents a modern approach to software development where applications are composed of small, independent services that communicate over well-defined APIs. This architectural style has gained prominence as an alternative to monolithic applications, offering benefits such as:
+
+\begin{itemize}
+    \item \textbf{Independent Deployability}: Each service can be deployed, upgraded, and scaled independently
+    \item \textbf{Technology Diversity}: Different services can use different technologies based on their specific requirements
+    \item \textbf{Focused Development Teams}: Teams can focus on specific business domains and services
+    \item \textbf{Resilience}: Failures in one service can be isolated without affecting the entire system
+    \item \textbf{Scalability}: Services can be individually scaled based on demand
+\end{itemize}
+
+For OllamaNet, microservices architecture enables the separation of concerns between different aspects of the platform (authentication, administration, conversations, exploration, inference) while allowing for independent evolution of each component.
+
+\begin{figure}
+    \centering
+    % \includegraphics[width=0.9\textwidth]{./Chapter02/figures/Monolithic_vs_Microservices.png}
+    \caption{Monolithic vs Microservices Architecture}
+    \label{fig:mono-vs-micro}
+\end{figure}
+
+\begin{terminology}
+\begin{description}
+    \item[Microservice:] An architectural style that structures an application as a collection of services that are independently deployable
+    \item[API Gateway:] A server that acts as an API front-end, receiving API requests and routing them to appropriate services
+\end{description}
+\end{terminology}
+
+\subsection{Domain-Driven Design}
+
+Domain-Driven Design (DDD) is a software development approach that focuses on modeling the software to match the business domain. It involves:
+
+\begin{itemize}
+    \item \textbf{Ubiquitous Language}: A common language shared between developers and domain experts
+    \item \textbf{Bounded Contexts}: Explicit boundaries between different domain models
+    \item \textbf{Entities and Value Objects}: Clear modeling of domain objects based on identity and characteristics
+    \item \textbf{Aggregates}: Clusters of domain objects treated as a unit for data changes
+    \item \textbf{Domain Services}: Operations that don't naturally belong to any specific entity
+\end{itemize}
+
+OllamaNet employs DDD principles to ensure each microservice accurately represents its domain model (administration, authentication, conversations, exploration, inference) with appropriate boundaries and clear separation of concerns. This approach resulted in well-defined service boundaries that align with business capabilities.
+
+\begin{figure}
+    \centering
+    % \includegraphics[width=0.9\textwidth]{./Chapter02/figures/DDD_Bounded_Contexts.png}
+    \caption{Domain-Driven Design Bounded Contexts}
+    \label{fig:ddd-contexts}
+\end{figure}
+
+\begin{terminology}
+\begin{description}
+    \item[Bounded Context:] A conceptual boundary within which a particular domain model applies
+    \item[Aggregate:] A cluster of domain objects that can be treated as a single unit
+    \item[Ubiquitous Language:] A common language used by developers and domain experts to describe domain concepts
+\end{description}
+\end{terminology}
+
+\subsection{API Design and RESTful Principles}
+
+The OllamaNet platform follows RESTful API design principles across all its services:
+
+\begin{itemize}
+    \item \textbf{Resource-Oriented}: APIs are designed around resources (conversations, models, users)
+    \item \textbf{Standard HTTP Verbs}: GET, POST, PUT, DELETE are used for CRUD operations
+    \item \textbf{Stateless Communication}: Each request contains all necessary information
+    \item \textbf{Standardized Response Formats}: Consistent JSON responses with appropriate HTTP status codes
+    \item \textbf{Versioning}: API versioning to support evolution without breaking changes
+    \item \textbf{Clear Endpoint Naming}: Intuitive and descriptive endpoint paths
+\end{itemize}
+
+These principles ensure consistency across services and ease of integration for client applications.
+
+\subsection{Authentication and Authorization Theories}
+
+OllamaNet implements a robust authentication and authorization system using established security patterns:
+
+\begin{itemize}
+    \item \textbf{Token-Based Authentication}: Using JWT (JSON Web Tokens) for secure, stateless authentication
+    \item \textbf{Claims-Based Identity}: User information stored as claims within tokens
+    \item \textbf{Role-Based Access Control}: Permissions assigned based on user roles
+    \item \textbf{Refresh Token Pattern}: Long-lived refresh tokens used to obtain new access tokens
+    \item \textbf{Token Validation}: Comprehensive validation of token signature, expiry, and claims
+    \item \textbf{Gateway Authentication}: Centralized authentication at the API Gateway level
+\end{itemize}
+
+\subsection{Caching Strategies and Patterns}
+
+The platform implements several caching strategies to optimize performance:
+
+\begin{itemize}
+    \item \textbf{Distributed Caching}: Redis used as a shared cache across services
+    \item \textbf{Cache-Aside Pattern}: Data retrieved from cache first, falling back to the database
+    \item \textbf{Expiration Policies}: Time-based expiration tailored to data volatility
+    \item \textbf{Cache Invalidation}: Strategies to update or invalidate cached data when modified
+    \item \textbf{Multi-Level Caching}: In-memory and distributed caching used in tandem
+    \item \textbf{Resilient Caching}: Graceful fallback when cache is unavailable
+\end{itemize}
+
+\subsection{Distributed Systems Concepts}
+
+As a distributed system, OllamaNet addresses several core distributed computing challenges:
+
+\begin{itemize}
+    \item \textbf{Service Discovery}: Using message brokers (RabbitMQ) for dynamic service URL updates
+    \item \textbf{Consistency Models}: Ensuring data consistency across services
+    \item \textbf{Failure Handling}: Strategies for graceful degradation when components fail
+    \item \textbf{Distributed Tracing}: Request tracing across service boundaries
+    \item \textbf{Eventual Consistency}: Accepting temporary inconsistency for system availability
+    \item \textbf{Circuit Breaking}: Preventing cascading failures across service calls
+\end{itemize}
+
+\begin{terminology}
+\begin{description}
+    \item[REST:] Representational State Transfer, an architectural style for distributed hypermedia systems
+    \item[JWT:] JSON Web Token, a compact, URL-safe means of representing claims to be transferred between two parties
+    \item[Caching:] Storing copies of data in a high-speed data store to reduce database load
+\end{description}
+\end{terminology}
+
+\section{Similar Systems Analysis}
+
+Several existing AI platforms offer similar functionality to OllamaNet, though often with different architectural approaches:
+
+\subsection*{OpenAI API Platform}
+\begin{itemize}
+    \item \textbf{Architecture}: Centralized API services with limited customization
+    \item \textbf{Strengths}: Enterprise-grade security, high-reliability, extensive model selection
+    \item \textbf{Limitations}: Limited local deployment options, proprietary technology stack, higher cost
+    \item \textbf{Comparison}: OllamaNet provides greater customization, local deployment, and cost advantages
+\end{itemize}
+
+\subsection*{Hugging Face Spaces}
+\begin{itemize}
+    \item \textbf{Architecture}: Model hosting platform with standardized deployment
+    \item \textbf{Strengths}: Wide model availability, community-driven, integrated UI components
+    \item \textbf{Limitations}: Less focus on enterprise features, limited conversation persistence
+    \item \textbf{Comparison}: OllamaNet offers stronger administrative controls and conversation management
+\end{itemize}
+
+\subsection*{LangChain}
+\begin{itemize}
+    \item \textbf{Architecture}: Python framework for LLM development, not a complete platform
+    \item \textbf{Strengths}: Extensive integrations, component-based architecture, rapid prototyping
+    \item \textbf{Limitations}: Python-centric, less focus on enterprise deployment, limited built-in UI
+    \item \textbf{Comparison}: OllamaNet provides a complete, production-ready system vs. a development framework
+\end{itemize}
+
+\subsection*{LocalAI}
+\begin{itemize}
+    \item \textbf{Architecture}: Local API server for open-source models
+    \item \textbf{Strengths}: Self-hosted, privacy-focused, open-source
+    \item \textbf{Limitations}: Limited administrative features, Python-based implementation
+    \item \textbf{Comparison}: OllamaNet offers more comprehensive microservices with better separation of concerns
+\end{itemize}
+
+\subsection*{Ollama (Base System)}
+\begin{itemize}
+    \item \textbf{Architecture}: Single-service model server
+    \item \textbf{Strengths}: Easy setup, rapidly growing ecosystem, excellent command-line interface
+    \item \textbf{Limitations}: Limited administrative features, basic conversation management
+    \item \textbf{Comparison}: OllamaNet extends Ollama's capabilities with robust microservices around it
+\end{itemize}
+
+A key advantage of OllamaNet over these systems is its comprehensive microservices approach with strong domain separation, robust database structure, and enterprise-grade features while maintaining the ability to leverage open-source models.
+
+\section{Technologies Evaluation}
+
+The OllamaNet platform has been built using a carefully selected technology stack:
+
+\subsection*{Backend Framework}
+
+\textbf{ASP.NET Core (.NET 9.0)} was chosen as the primary backend framework for all microservices due to:
+\begin{itemize}
+    \item Performance advantages and scalability
+    \item Comprehensive support for RESTful API development
+    \item Strong typing and compile-time safety
+    \item Rich ecosystem of libraries and tools
+    \item Cross-platform capabilities
+    \item Superior robustness compared to popular Python-based LLM libraries
+    \item Enhanced customizability and extensibility for enterprise implementations
+    \item Better thread management for handling concurrent LLM operations
+\end{itemize}
+
+The decision to use C\# and .NET over Python (the most common language for LLM applications) was deliberate, prioritizing long-term maintainability, performance, and enterprise-grade stability over the rapid prototyping advantages of Python libraries. This choice enables developers to build custom extensions and integrations with greater confidence in the system's reliability and scalability.
+
+\subsection*{Database Technologies}
+
+\textbf{SQL Server} serves as the primary database technology, offering:
+\begin{itemize}
+    \item Strong ACID compliance for transactional integrity
+    \item Robust performance for relational data
+    \item Comprehensive tooling and management capabilities
+    \item Strong integration with Entity Framework Core
+    \item Superior data reliability compared to non-relational alternatives
+\end{itemize}
+
+OllamaNet deliberately employs a relational database schema rather than trending non-relational approaches. While non-relational databases offer faster development cycles and simpler initial setup, the project prioritizes data reliability, relationship integrity, and consistent query performance. This approach ensures conversations, user data, and model information maintain their referential integrity and can be reliably retrieved with consistent performance characteristics, even as the data grows in complexity and volume.
+
+\textbf{Redis} provides distributed caching capabilities, delivering:
+\begin{itemize}
+    \item High-performance in-memory data storage
+    \item Support for various data structures
+    \item Pub/Sub capabilities for real-time features
+    \item Distributed caching across services
+\end{itemize}
+
+\subsection*{Authentication \& Authorization}
+
+\textbf{JWT (JSON Web Tokens)} with refresh token functionality was implemented for:
+\begin{itemize}
+    \item Stateless authentication between services
+    \item Secure transmission of claims
+    \item Support for token expiration and renewal
+    \item Cross-service authorization
+\end{itemize}
+
+\subsection*{API Documentation}
+
+\textbf{Swagger/OpenAPI} was selected for API documentation because it offers:
+\begin{itemize}
+    \item Interactive API exploration and testing
+    \item Automatic documentation generation
+    \item Client code generation capabilities
+    \item Standardized API specifications
+\end{itemize}
+
+\subsection*{ORM Solution}
+
+\textbf{Entity Framework Core} serves as the object-relational mapping solution, providing:
+\begin{itemize}
+    \item Clean abstraction over database operations
+    \item LINQ support for type-safe queries
+    \item Migrations for database schema evolution
+    \item Comprehensive relationship mapping
+\end{itemize}
+
+\subsection*{Additional Libraries and Tools}
+\begin{itemize}
+    \item \textbf{FluentValidation}: Comprehensive request validation
+    \item \textbf{Polly}: Resilience policies for external service calls
+    \item \textbf{OllamaSharp}: Client library for Ollama API integration
+    \item \textbf{StackExchange.Redis}: Redis client for distributed caching
+    \item \textbf{RabbitMQ Client}: Message broker integration for service discovery
+    \item \textbf{Jupyter Notebook} (for InferenceService): Interactive development environment
+    \item \textbf{ngrok} (for InferenceService): Secure tunneling for notebook-based services
+\end{itemize}
+
+\begin{terminology}
+\begin{description}
+    \item[ORM:] Object-Relational Mapping, a technique for converting data between incompatible type systems
+    \item[ACID:] Atomicity, Consistency, Isolation, Durability - properties of database transactions that guarantee validity
+    \item[Pub/Sub:] Publish/Subscribe pattern where senders don't send messages directly to receivers
+\end{description}
+\end{terminology}
+
+\section{Architectural Patterns}
+
+\subsection{Monolithic vs Microservices Comparison}
+
+OllamaNet chose a microservices architecture over a monolithic approach after careful consideration of trade-offs:
+
+\begin{table}[h]
+  \centering
+  \caption{Comparison between Monolithic and Microservices Approaches}
+  \label{tab:mono-vs-micro}
+  \begin{tabular}{|l|p{3.5cm}|p{3.5cm}|p{3.5cm}|}
+    \hline
+    \textbf{Aspect} & \textbf{Monolithic Approach} & \textbf{Microservices Approach} & \textbf{OllamaNet Decision} \\
+    \hline
+    Deployment & Simple but all-or-nothing & Complex but granular & Microservices for deployment flexibility \\
+    \hline
+    Development & Simple coordination but coupled & Independent but requires interfaces & Microservices for team autonomy \\
+    \hline
+    Scaling & Vertical scaling of entire application & Horizontal scaling of specific services & Microservices for targeted scaling \\
+    \hline
+    Technology & Single technology stack & Technology diversity & Microservices with consistent .NET stack \\
+    \hline
+    Resilience & Single point of failure & Isolated failures & Microservices for fault isolation \\
+    \hline
+    Complexity & Lower initial complexity & Higher distributed complexity & Microservices with careful boundary design \\
+    \hline
+  \end{tabular}
+\end{table}
+
+\begin{figure}
+    \centering
+    % \includegraphics[width=0.8\textwidth]{./Chapter02/figures/Deployment_Comparison.png}
+    \caption{Deployment Comparison Between Architectures}
+    \label{fig:deploy-comparison}
+\end{figure}
+
+\subsection{Microservices Architecture Overview}
+
+OllamaNet implements a microservices architecture with the following characteristics:
+
+\begin{itemize}
+    \item \textbf{Service Boundaries}: Services are divided along clear domain boundaries (administration, authentication, conversations, exploration, inference)
+    \item \textbf{API Gateway Pattern}: Gateway service provides a single entry point for clients
+    \item \textbf{Shared Data Layer}: Common DB layer for consistent data access patterns across services
+    \item \textbf{Event-Driven Communication}: Services communicate through events for loose coupling
+    \item \textbf{Distributed Caching}: Redis-based caching for performance optimization
+    \item \textbf{Authentication Integration}: JWT-based authentication shared across services
+    \item \textbf{Service Discovery}: Dynamic discovery of service endpoints, especially critical for the notebook-based InferenceService
+\end{itemize}
+
+\begin{figure}
+    \centering
+    % \includegraphics[width=0.9\textwidth]{./Chapter02/figures/OllamaNet_Architecture_Details.png}
+    \caption{OllamaNet Microservices Architecture}
+    \label{fig:ollamanet-arch-details}
+\end{figure}
+
+\subsection{Design Patterns in Microservices}
+
+OllamaNet implements several design patterns to solve common challenges in microservices architecture:
+
+\begin{itemize}
+    \item \textbf{Repository Pattern}: Abstracts data access logic from business logic across all services
+    \item \textbf{Unit of Work Pattern}: Coordinates operations across multiple repositories
+    \item \textbf{Mediator Pattern}: Decouples request handling from business logic
+    \item \textbf{Circuit Breaker Pattern}: Prevents cascading failures across services
+    \item \textbf{Retry Pattern}: Automatic retry with exponential backoff for transient failures
+    \item \textbf{API Gateway Pattern}: Service-specific APIs with consistent patterns
+    \item \textbf{Service Discovery Pattern}: Dynamic discovery of service endpoints via RabbitMQ
+    \item \textbf{Caching Strategy Pattern}: Multi-level caching for performance optimization
+    \item \textbf{Configuration Management Pattern}: Centralized configuration with dynamic updates
+    \item \textbf{Decorator Pattern}: Authentication and authorization implemented as decorators
+    \item \textbf{Strategy Pattern}: Different services have different routing strategies
+\end{itemize}
+
+\begin{figure}
+    \centering
+    % \includegraphics[width=0.8\textwidth]{./Chapter02/figures/Design_Patterns.png}
+    \caption{Design Patterns Implementation}
+    \label{fig:design-patterns}
+\end{figure}
+
+A unique aspect of OllamaNet's design is the notebook-first architecture of the InferenceService, which combines Python flexibility with the robustness of .NET microservices. This service uses ngrok tunneling and RabbitMQ-based service discovery to expose Ollama LLM capabilities from any cloud notebook environment, while maintaining secure integration with the broader platform.
+
+\begin{terminology}
+\begin{description}
+    \item[Repository Pattern:] A design pattern that mediates between the domain and data mapping layers
+    \item[Unit of Work:] A pattern that maintains a list of objects affected by a business transaction
+    \item[Circuit Breaker:] A design pattern that detects failures and prevents further requests to failing components
+\end{description}
+\end{terminology}
 
 
 
