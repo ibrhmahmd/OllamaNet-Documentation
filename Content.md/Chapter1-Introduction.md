@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-OllamaNet is a comprehensive AI platform built on a modern microservices architecture that enables it`s users to explore, interact with, and manage various AI models through a coherent ecosystem of services. The platform provides both administrative capabilities and end-user experiences for AI-powered conversations and model discovery, all supported by a robust database layer.
+OllamaNet is a comprehensive platform built on a modern event-driven microservices architecture that enables its users to explore, interact with, and manage various AI models through a coherent ecosystem of services. The platform provides both administrative capabilities and end-user experiences for AI-powered conversations and model discovery, all supported by a robust database layer.
 
 The platform is designed to address the growing need for accessible, well-organized AI model interactions while maintaining security, scalability, and performance through specialized microservices that handle distinct aspects of the system's functionality.
 
@@ -41,13 +41,12 @@ graph TD
 Traditional AI model deployment and interaction platforms often face several key challenges:
 
 1. **Complexity in Administration**: Managing AI models, users, and permissions typically requires complex administrative interfaces.
-2. **Context Loss in Conversations**: Users often lose conversation history and context when interacting with AI models.
-3. **Inefficient Discovery**: Finding the right AI model for specific needs can be difficult without proper categorization and search capabilities.
-4. **Security Concerns**: Maintaining proper authentication and authorization across AI services presents security challenges.
-5. **Performance Bottlenecks**: AI interactions can suffer from latency issues, especially without proper caching and optimization strategies.
-6. **Data Management Complexity**: Handling the persistence of conversations, user data, and model information requires sophisticated data access patterns.
-7. **Reliability Constraints**: Many existing solutions use non-relational databases for speed of development, sacrificing data reliability and relationship integrity in the process.
-8. **Limited Customization**: Popular Python-based LLM libraries prioritize simplicity over extensibility, limiting developers' ability to customize the infrastructure.
+2. **Context Loss in Conversations**: Users often lose conversation history and context when interacting with LLMs due to the limited memory managment frameworks.
+3. **Inefficient Discovery**: Finding the right LLM for specific needs can be difficult without proper categorization and search capabilities or benchmarks visualization.
+4. **Performance Bottlenecks**: LLM interactions can suffer from latency issues, especially without proper caching, asyncronous communication optimization strategies.
+5. **Data Management Complexity**: Handling the persistence of conversations, user data, and model information requires sophisticated data access patterns.
+6. **Reliability Constraints**: Many existing solutions use non-relational databases for speed of development, sacrificing data reliability and relationship integrity in the process.
+7. **Limited Customization**: Popular Python-based LLM libraries prioritize simplicity over extensibility, limiting developers' ability to customize the infrastructure.
 
 OllamaNet addresses these challenges through its specialized microservice architecture, providing a robust, extensible, and maintainable solution for AI model interaction.
 
@@ -169,7 +168,7 @@ OllamaNet follows a structured implementation approach:
 
 1. **Service Isolation**: Each microservice addresses a specific domain with clear boundaries, following domain-driven design principles.
 2. **Shared Data Layer**: A common DB layer provides consistent data access patterns across all services.
-3. **API-First Design**: RESTful APIs with comprehensive documentation via Swagger/OpenAPI ensure clear service interfaces.
+3. **API-First Design**: RESTful APIs with comprehenasive documentation via Swagger/OpenAPI ensure clear service interfaces.
 4. **Progressive Enhancement**: Services evolve through phased migrations and improvements, with clear versioning.
 5. **Performance Optimization**: Strategic caching and efficient data access patterns ensure responsive user experiences.
 6. **Security Integration**: Consistent authentication and authorization across services protect resources.

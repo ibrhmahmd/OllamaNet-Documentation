@@ -17,7 +17,7 @@ pdfauthor
    Khoulod Khaled Bakr
 }
 \newcommand{\tsupervisors}{
-    Dr. Reda Hussein Mabrouk \\
+  Assoc. Prof. Reda M. Hussien \\
 }
 
 \newcommand{\tuniversity}{Kafr El-Sheikh University}
@@ -50,15 +50,15 @@ pdfauthor
 \input{LaTeX/packages}
 
 % Custom environments
-\newmdenv[
-  linewidth=0.5pt,
-  frametitle={Terminology},
-  frametitlefont=\normalfont\bfseries,
-  backgroundcolor=gray!10,
-  roundcorner=4pt,
-  skipabove=7pt,
-  skipbelow=7pt
-]{terminology}
+% Simple Terminology note environment: horizontal rule + smaller font
+\newenvironment{terminology}{%
+  \par\medskip\hrule\medskip\footnotesize
+}{%
+  \par\normalsize\medskip
+}
+
+% Compatibility alias so existing \begin{terminologybox} works
+\let\terminologybox\terminology
 
 \input{LaTeX/layout}
 \input{LaTeX/commands}
@@ -81,6 +81,8 @@ pdfauthor
 \include{Chapter04/Chapter04}
 \cleardoublepage
 \include{Chapter05/Chapter05}
+\cleardoublepage
+\include{Chapter06/Chapter06}
 \cleardoublepage
 
 \bibliographystyle{\tReferenceStyle}
