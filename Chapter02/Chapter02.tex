@@ -20,12 +20,13 @@ Microservices architecture represents a modern approach to software development 
 
 For OllamaNet, microservices architecture enables the separation of concerns between different aspects of the platform (authentication, administration, conversations, exploration, inference) while allowing for independent evolution of each component.
 
-\begin{figure}
-    \centering
-    \includegraphics[width=0.9\textwidth]{./Chapter02/figures/Monolithic_vs_Microservices.png}
-    \caption{Monolithic vs Microservices Architecture}
-    \label{fig:mono-vs-micro}
-\end{figure}
+% Commented out due to image reading issues
+% \begin{figure}
+%     \centering
+%     \includegraphics[width=0.9\textwidth]{./Chapter02/figures/Monolithic_vs_Microservices.png}
+%     \caption{Monolithic vs Microservices Architecture}
+%     \label{fig:mono-vs-micro}
+% \end{figure}
 
 \begin{terminology}
 \begin{description}
@@ -48,12 +49,13 @@ Domain-Driven Design (DDD) is a software development approach that focuses on mo
 
 OllamaNet employs DDD principles to ensure each microservice accurately represents its domain model (administration, authentication, conversations, exploration, inference) with appropriate boundaries and clear separation of concerns. This approach resulted in well-defined service boundaries that align with business capabilities.
 
-\begin{figure}
-    \centering
-    \includegraphics[width=0.9\textwidth]{./Chapter02/figures/DDD_Bounded_Contexts.png}
-    \caption{Domain-Driven Design Bounded Contexts}
-    \label{fig:ddd-contexts}
-\end{figure}
+% Commented out due to image reading issues
+% \begin{figure}
+%     \centering
+%     \includegraphics[width=0.9\textwidth]{./Chapter02/figures/DDD_Bounded_Contexts.png}
+%     \caption{Domain-Driven Design Bounded Contexts}
+%     \label{fig:ddd-contexts}
+% \end{figure}
 
 \begin{terminology}
 \begin{description}
@@ -290,12 +292,13 @@ OllamaNet chose a microservices architecture over a monolithic approach after ca
   \end{tabular}
 \end{table}
 
-\begin{figure}
-    \centering
-    \includegraphics[width=0.8\textwidth]{./Chapter02/figures/Deployment_Comparison.png}
-    \caption{Deployment Comparison Between Architectures}
-    \label{fig:deploy-comparison}
-\end{figure}
+% Commented out due to image reading issues
+% \begin{figure}
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{./Chapter02/figures/Deployment_Comparison.png}
+%     \caption{Deployment Comparison Between Architectures}
+%     \label{fig:deploy-comparison}
+% \end{figure}
 
 \subsection{Microservices Architecture Overview}
 
@@ -311,12 +314,13 @@ OllamaNet implements a microservices architecture with the following characteris
     \item \textbf{Service Discovery}: Dynamic discovery of service endpoints, especially critical for the notebook-based InferenceService
 \end{itemize}
 
-\begin{figure}
-    \centering
-    \includegraphics[width=0.9\textwidth]{./Chapter02/figures/OllamaNet_Architecture_Details.png}
-    \caption{OllamaNet Microservices Architecture}
-    \label{fig:ollamanet-arch-details}
-\end{figure}
+% Commented out due to image reading issues
+% \begin{figure}
+%     \centering
+%     \includegraphics[width=0.9\textwidth]{./Chapter02/figures/OllamaNet_Architecture_Details.png}
+%     \caption{OllamaNet Microservices Architecture}
+%     \label{fig:ollamanet-arch-details}
+% \end{figure}
 
 \subsection{Design Patterns in Microservices}
 
@@ -336,12 +340,13 @@ OllamaNet implements several design patterns to solve common challenges in micro
     \item \textbf{Strategy Pattern}: Different services have different routing strategies
 \end{itemize}
 
-\begin{figure}
-    \centering
-    \includegraphics[width=0.8\textwidth]{./Chapter02/figures/Design_Patterns.png}
-    \caption{Design Patterns Implementation}
-    \label{fig:design-patterns}
-\end{figure}
+% Commented out due to image reading issues
+% \begin{figure}
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{./Chapter02/figures/Design_Patterns.png}
+%     \caption{Design Patterns Implementation}
+%     \label{fig:design-patterns}
+% \end{figure}
 
 A unique aspect of OllamaNet's design is the notebook-first architecture of the InferenceService, which combines Python flexibility with the robustness of .NET microservices. This service uses ngrok tunneling and RabbitMQ-based service discovery to expose Ollama LLM capabilities from any cloud notebook environment, while maintaining secure integration with the broader platform.
 

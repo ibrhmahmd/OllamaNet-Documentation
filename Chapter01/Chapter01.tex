@@ -4,24 +4,27 @@
 
 \section{Project Overview}
 
-OllamaNet is a comprehensive AI platform built on a modern microservices architecture that enables its users to explore, interact with, and manage various AI models through a coherent ecosystem of services. The platform provides both administrative capabilities and end-user experiences for AI-powered conversations and model discovery, all supported by a robust database layer.
+OllamaNet is a comprehensive foundational infrastructure platform built on a modern Event-Driven microservices architecture that enables its users to explore, interact with, and manage various LLMs through a coherent ecosystem of services. The platform provides both administrative capabilities and end-user experiences for AI-powered conversations and model discovery, all supported by a robust database layer.
 
 The platform is designed to address the growing need for accessible, well-organized AI model interactions while maintaining security, scalability, and performance through specialized microservices that handle distinct aspects of the system's functionality.
 
 A key purpose of OllamaNet is to provide developers with a customizable and scalable infrastructure for working with Large Language Models (LLMs), offering an alternative to existing Python-based libraries that may lack performance and customization options. By leveraging C\# and .NET, the platform delivers superior robustness, maintainability, and extensibility, opening pathways for custom extensions and enterprise-grade implementations.
 
-\begin{figure}
-    \centering
-    \includegraphics[width=0.8\textwidth]{./Chapter01/figures/OllamaNet_System_Overview.png}
-    \caption{OllamaNet Architecture Overview}
-    \label{fig:ollamanet-architecture}
-\end{figure}
+% Commented out due to image reading issues
+% \begin{figure}
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{./Chapter01/figures/OllamaNet_System_Overview.png}
+%     \caption{OllamaNet Architecture Overview}
+%     \label{fig:ollamanet-architecture}
+% \end{figure}
 
-\begin{terminologybox}
+\begin{terminology}
+\begin{description}
 \item[OllamaNet] Comprehensive AI platform with microservices architecture for LLM interaction
 \item[Microservice] Independent, specialized service with specific domain responsibilities  
 \item[LLM] Large Language Model, used for text generation and understanding
-\end{terminologybox}
+\end{description}
+\end{terminology}
 
 \section{Problem Statement}
 
@@ -103,12 +106,13 @@ OllamaNet encompasses a full-stack solution with the following components:
     \item RabbitMQ for service discovery
 \end{itemize}
 
-\begin{figure}
-    \centering
-    \includegraphics[width=0.8\textwidth]{./Chapter01/figures/OllamaNet_Platform_Components.png}
-    \caption{OllamaNet Platform Components}
-    \label{fig:ollamanet-platform-components}
-\end{figure}
+% Commented out due to image reading issues
+% \begin{figure}
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{./Chapter01/figures/OllamaNet_Platform_Components.png}
+%     \caption{OllamaNet Platform Components}
+%     \label{fig:ollamanet-platform-components}
+% \end{figure}
 
 \begin{terminology}
 \begin{description}
