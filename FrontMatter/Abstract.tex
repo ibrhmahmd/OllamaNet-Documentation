@@ -8,17 +8,16 @@
 \begin{center}
     \section*{Abstract}
 \end{center}
-Abstract text goes here\dots{}
 
-If you've just opened up this template, you should check out \autoref{ch:intro} for a quick introduction. 
+OllamaNet is a comprehensive platform built on a modern Event-Driven microservices architecture that enables users to explore, interact with, and manage various LLMs through a coherent ecosystem of services. The platform provides both administrative capabilities and end-user experiences for LLM-powered conversations and model discovery, all supported by a robust database layer. By leveraging C\# and .NET, OllamaNet delivers superior robustness, maintainability, and extensibility compared to traditional Python-based libraries, opening pathways for custom extensions and enterprise-grade implementations.
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+The platform implements a sophisticated microservices architecture with clear separation of concerns across multiple specialized services including API Gateway, Auth Service, Admin Service, Explore Service, Conversation Service, Inference Service, and Database Layer. Each service fulfills specific responsibilities: the Gateway serves as the unified entry point for client requests; Auth Service manages user authentication and authorization; Admin Service provides platform management capabilities; Explore Service enables AI model discovery; Conversation Service manages user interactions with AI models; Inference Service connects to the Ollama engine; and the Database Layer provides data persistence.
 
-\textbf{Keywords:} \tkeywords
+Key features include independent specialized services, domain-driven design, API-first approach, robust data management with Entity Framework Core, Redis-based caching, JWT authentication with role-based authorization, real-time capabilities with streaming responses, and independent scalability of services. The technical stack comprises ASP.NET Core Web API (.NET 9.0), Entity Framework Core, SQL Server, Redis, JWT Authentication, Ocelot, Ollama, RabbitMQ, and Swagger/OpenAPI.
+
+The architecture adheres to principles of service independence, domain-driven design, API-first design, resilience, security at every layer, scalability, and observability. This comprehensive approach enables OllamaNet to deliver a robust, maintainable, and extensible platform for AI model interaction.
+
+\textbf{Keywords:} Microservices Architecture, AI Platform, Domain-Driven Design, .NET, Ollama, API Gateway, Authentication, Conversation Management, Model Discovery
 
 \vspace*{\fill}
 
