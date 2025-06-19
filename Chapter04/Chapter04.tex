@@ -8,12 +8,12 @@
 
 The OllamaNet platform is built on a modern microservices architecture that separates concerns into distinct, independently deployable services. Each service focuses on a specific domain within the system, communicating through well-defined APIs and messaging patterns.
 
-% \begin{figure}
-%     \centering
-%    %  \includegraphics[width=0.8\textwidth]{./Chapter04/figures/system_architecture.png}
-%     \caption{OllamaNet High-level System Architecture}
-%     \label{fig:system-architecture}
-% \end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{./Chapter04/figures/OllamaNet_Architecture.png}
+    \caption{OllamaNet High-level System Architecture}
+    \label{fig:system-architecture}
+\end{figure}
 
 The architecture consists of the following key components:
 
@@ -56,12 +56,12 @@ The architectural goals include:
 
 The OllamaNet system is designed for flexible deployment across various environments:
 
-% \begin{figure}
-%     \centering
-%    %  \includegraphics[width=0.8\textwidth]{./Chapter04/figures/service_deployment.png}
-%     \caption{OllamaNet System Topology and Deployment View}
-%     \label{fig:system-topology}
-% \end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{./Chapter04/figures/service_deployment.png}
+    \caption{OllamaNet System Topology and Deployment View}
+    \label{fig:system-topology}
+\end{figure}
 
 The deployment architecture supports:
 
@@ -171,7 +171,7 @@ The service decomposition follows Domain-Driven Design principles:
 
 \begin{figure}
     \centering
-   %  \includegraphics[width=0.8\textwidth]{./Chapter04/figures/domain_contexts.png}
+    \includegraphics[width=0.8\textwidth]{./Chapter04/figures/domain_contexts.png}
     \caption{OllamaNet Bounded Contexts in Domain-Driven Design}
     \label{fig:domain-contexts}
 \end{figure}
@@ -213,7 +213,7 @@ Services in OllamaNet have the following dependencies:
 
 \begin{figure}
     \centering
-   %  \includegraphics[width=0.8\textwidth]{./Chapter04/figures/service_dependencies.png}
+    \includegraphics[width=0.8\textwidth]{./Chapter04/figures/service_dependencies.png}
     \caption{OllamaNet Service Dependencies}
     \label{fig:service-dependencies}
 \end{figure}
@@ -233,7 +233,7 @@ OllamaNet implements service discovery using RabbitMQ, particularly for the dyna
 
 \begin{figure}
     \centering
-   %  \includegraphics[width=0.8\textwidth]{./Chapter04/figures/service_discovery.png}
+    \includegraphics[width=0.8\textwidth]{./Chapter04/figures/service_discovery.png}
     \caption{Service Discovery Sequence Diagram}
     \label{fig:service-discovery}
 \end{figure}
@@ -299,7 +299,7 @@ The OllamaNet Gateway is built using the Ocelot API Gateway library, providing a
 
 \begin{figure}
     \centering
-   %  \includegraphics[width=0.8\textwidth]{./Chapter04/figures/gateway_components.png}
+    \includegraphics[width=0.8\textwidth]{./Chapter04/figures/gateway_components.png}
     \caption{Gateway Architecture Components}
     \label{fig:gateway-components}
 \end{figure}
@@ -482,7 +482,7 @@ OllamaNet uses RabbitMQ for asynchronous communication:
 
 \begin{figure}
     \centering
-   %  \includegraphics[width=0.8\textwidth]{./Chapter04/figures/messaging_patterns.png}
+    \includegraphics[width=0.8\textwidth]{./Chapter04/figures/messaging_patterns.png}
     \caption{Message Broker Communication Patterns}
     \label{fig:messaging-patterns}
 \end{figure}
