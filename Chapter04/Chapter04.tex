@@ -8,12 +8,13 @@
 
 The OllamaNet platform is built on a modern microservices architecture that separates concerns into distinct, independently deployable services. Each service focuses on a specific domain within the system, communicating through well-defined APIs and messaging patterns.
 
-\begin{figure}
+\begin{figure}[p]
     \centering
-    \includegraphics[width=0.8\textwidth]{./Chapter04/figures/OllamaNet_Architecture.png}
+    \includegraphics[width=\textwidth]{./Chapter04/figures/OllamaNet_Architecture.png}
     \caption{OllamaNet High-level System Architecture}
     \label{fig:system-architecture}
 \end{figure}
+\clearpage
 
 The architecture consists of the following key components:
 
@@ -56,12 +57,13 @@ The architectural goals include:
 
 The OllamaNet system is designed for flexible deployment across various environments:
 
-\begin{figure}
+\begin{figure}[p]
     \centering
-    \includegraphics[width=0.8\textwidth]{./Chapter04/figures/service_deployment.png}
+    \includegraphics[width=\textwidth]{./Chapter04/figures/service_deployment.png}
     \caption{OllamaNet System Topology and Deployment View}
     \label{fig:system-topology}
 \end{figure}
+\clearpage
 
 The deployment architecture supports:
 
@@ -169,12 +171,13 @@ The service decomposition follows Domain-Driven Design principles:
    \item \textbf{Domain Events}: Services communicate through domain events when appropriate.
 \end{enumerate}
 
-\begin{figure}
+\begin{figure}[p]
     \centering
-    \includegraphics[width=0.8\textwidth]{./Chapter04/figures/domain_contexts.png}
+    \includegraphics[width=\textwidth]{./Chapter04/figures/domain_contexts.png}
     \caption{OllamaNet Bounded Contexts in Domain-Driven Design}
     \label{fig:domain-contexts}
 \end{figure}
+\clearpage
 
 \subsection{Service Granularity Decisions}
 
@@ -211,12 +214,13 @@ Services in OllamaNet have the following dependencies:
    \item \textbf{Gateway Service}: Depends on all services for routing
 \end{enumerate}
 
-\begin{figure}
+\begin{figure}[p]
     \centering
-    \includegraphics[width=0.8\textwidth]{./Chapter04/figures/service_dependencies.png}
+    \includegraphics[width=\textwidth]{./Chapter04/figures/service_dependencies.png}
     \caption{OllamaNet Service Dependencies}
     \label{fig:service-dependencies}
 \end{figure}
+\clearpage
 
 \section{Service Discovery and Registry}
 
@@ -231,12 +235,13 @@ OllamaNet implements service discovery using RabbitMQ, particularly for the dyna
    \item \textbf{Message Format}: JSON messages contain service URLs and metadata.
 \end{enumerate}
 
-\begin{figure}
+\begin{figure}[p]
     \centering
-    \includegraphics[width=0.8\textwidth]{./Chapter04/figures/service_discovery.png}
+    \includegraphics[width=\textwidth]{./Chapter04/figures/service_discovery.png}
     \caption{Service Discovery Sequence Diagram}
     \label{fig:service-discovery}
 \end{figure}
+\clearpage
 
 \subsection{Dynamic Service URL Configuration}
 
@@ -297,12 +302,13 @@ The system monitors service health through several approaches:
 
 The OllamaNet Gateway is built using the Ocelot API Gateway library, providing a robust and flexible routing solution:
 
-\begin{figure}
+\begin{figure}[p]
     \centering
-    \includegraphics[width=0.8\textwidth]{./Chapter04/figures/gateway_components.png}
+    \includegraphics[width=\textwidth]{./Chapter04/figures/gateway_components.png}
     \caption{Gateway Architecture Components}
     \label{fig:gateway-components}
 \end{figure}
+\clearpage
 
 Key components of the Gateway architecture include:
 
@@ -480,12 +486,13 @@ OllamaNet uses RabbitMQ for asynchronous communication:
    \item \textbf{Consumer Acknowledgments}: Messages are acknowledged when processed successfully.
 \end{enumerate}
 
-\begin{figure}
+\begin{figure}[p]
     \centering
-    \includegraphics[width=0.8\textwidth]{./Chapter04/figures/messaging_patterns.png}
+    \includegraphics[width=\textwidth]{./Chapter04/figures/messaging_patterns.png}
     \caption{Message Broker Communication Patterns}
     \label{fig:messaging-patterns}
 \end{figure}
+\clearpage
 
 \subsubsection{Event-Driven Communication}
 
