@@ -20,12 +20,12 @@ The OllamaNet platform employs a robust database architecture that balances the 
    \item \textbf{Soft Delete}: Entities implement soft deletion to preserve historical data while allowing logical removal.
 \end{enumerate}
 
-\begin{figure}[p]
+\begin{sidewaysfigure}[p]
     \centering
-    \includegraphics[width=\textwidth]{./Chapter05/figures/database_architecture.png}
+    \includegraphics[width=\textwidth]{./Chapter05/figures/database_architecture.pdf}
     \caption{Database Architecture Overview}
     \label{fig:database-architecture}
-\end{figure}
+\end{sidewaysfigure}
 \clearpage
 
 \subsection{Database Per Service Pattern Consideration}
@@ -532,7 +532,8 @@ OllamaNet uses Redis for distributed caching to improve performance:
    \item \textbf{Cache-Aside Pattern}: Data is retrieved from the cache first, with database fallback when needed.
 
 \begin{verbatim}
-public async Task<T> GetOrSetAsync<T>(string key, Func<Task<T>> factory, TimeSpan? expiry = null)
+public async Task<T> GetOrSetAsync<T>
+   (string key, Func<Task<T>> factory, TimeSpan? expiry = null)
 {
     try
     {
@@ -555,7 +556,8 @@ public async Task<T> GetOrSetAsync<T>(string key, Func<Task<T>> factory, TimeSpa
     }
     catch (Exception ex)
     {
-        _logger.LogWarning(ex, "Cache operation failed for key: {Key}, falling back to data source", key);
+        _logger.LogWarning(ex, "Cache operation failed for key: {Key}, " +
+                           "falling back to data source", key);
         return await factory();
     }
 }
@@ -746,7 +748,8 @@ public void EnsureDatabaseCompatibility(MyDbContext context)
     var pendingMigrations = context.Database.GetPendingMigrations();
     if (pendingMigrations.Any())
     {
-        throw new Exception($"Database is out of date. {pendingMigrations.Count()} migrations need to be applied.");
+        throw new Exception($"Database is out of date.
+        {pendingMigrations.Count()} migrations need to be applied.");
     }
 }
 \end{verbatim}

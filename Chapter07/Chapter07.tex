@@ -24,12 +24,12 @@ The application's build process is configured for both development and productio
 
 The UI components are organized into a clear hierarchy that promotes reusability and maintainability:
 
-\begin{figure}[p]
+\begin{sidewaysfigure}[p]
     \centering
-    \includegraphics[width=\textwidth]{./Chapter07/figures/component_hierarchy.png}
+    \includegraphics[width=\textwidth]{./Chapter07/figures/component_hierarchy.PDF}
     \caption{Component Hierarchy and Organization}
     \label{fig:component-hierarchy}
-\end{figure}
+\end{sidewaysfigure}
 \clearpage
 
 The component organization follows these patterns:
@@ -57,7 +57,7 @@ Rather than using a state management library like Redux, the Ollama UI applicati
 
 \begin{figure}[p]
     \centering
-    \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio]{./Chapter07/figures/state_management_flow.png}
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{./Chapter07/figures/state_management_flow.PDF}
     \caption{State Management Flow Between Components}
     \label{fig:state-management-flow}
 \end{figure}
@@ -83,12 +83,12 @@ The router is configured with a base URL that supports deployment to GitHub Page
 
 The Ollama UI application is built using a collection of reusable core components that provide consistent functionality and appearance throughout the application. These components form the building blocks for more complex feature-specific interfaces.
 
-\begin{figure}[p]
+\begin{sidewaysfigure}[p]
     \centering
-    \includegraphics[width=\textwidth]{./Chapter07/figures/ui_layout_structure.png}
+    \includegraphics[width=\textwidth]{./Chapter07/figures/ui_layout_structure.PDF}
     \caption{UI Layout Structure and Responsive Breakpoints}
     \label{fig:ui-layout-structure}
-\end{figure}
+\end{sidewaysfigure}
 \clearpage
 
 \subsection{Layout Components}
@@ -168,12 +168,12 @@ The Ollama UI application includes specialized components tailored to specific f
 
 The authentication components handle user registration, login, and account management:
 
-\begin{figure}[p]
+\begin{sidewaysfigure}[p] 
     \centering
-    \includegraphics[width=\textwidth]{./Chapter07/figures/authentication_ui_flow.png}
+    \includegraphics[width=\textwidth]{./Chapter07/figures/authentication_ui_flow.PDF}
     \caption{User Authentication Flow Through UI}
     \label{fig:authentication-ui-flow}
-\end{figure}
+\end{sidewaysfigure}
 \clearpage
 
 Key authentication components include:
@@ -192,12 +192,12 @@ These components work with the AuthContext to manage the user's authentication s
 
 The model explorer components enable users to discover and select AI models for conversations:
 
-\begin{figure}[p]
+\begin{sidewaysfigure}[p]
     \centering
-    \includegraphics[width=\textwidth]{./Chapter07/figures/model_explorer_ui.png}
+    \includegraphics[width=\textwidth]{./Chapter07/figures/model_explorer_ui.PDF}
     \caption{Model Exploration Interface}
     \label{fig:model-explorer-ui}
-\end{figure}
+\end{sidewaysfigure}
 \clearpage
 
 The model explorer includes these key components:
@@ -216,12 +216,12 @@ These components help users find appropriate models for their specific needs, wi
 
 The conversation interface is the core interaction point for users to communicate with AI models:
 
-\begin{figure}[p]
+\begin{sidewaysfigure}[p]
     \centering
-    \includegraphics[width=\textwidth]{./Chapter07/figures/conversation_ui.png}
+      \includegraphics[width=\textwidth]{./Chapter07/figures/conversation_ui.PDF}
     \caption{Conversation Interface}
     \label{fig:conversation-ui}
-\end{figure}
+\end{sidewaysfigure}
 \clearpage
 
 Key conversation components include:
@@ -242,12 +242,12 @@ The conversation interface supports markdown rendering, code syntax highlighting
 
 The document management interface allows users to upload and manage documents for context-enhanced conversations:
 
-\begin{figure}[p]
+\begin{sidewaysfigure}[p]
     \centering
-    \includegraphics[width=\textwidth]{./Chapter07/figures/document_upload_ui.png}
+    \includegraphics[width=\textwidth]{./Chapter07/figures/document_upload_ui.PDF}
     \caption{Document Upload Interface}
     \label{fig:document-upload-ui}
-\end{figure}
+\end{sidewaysfigure}
 \clearpage
 
 Document management components include:
@@ -265,12 +265,12 @@ These components integrate with the conversation interface to enhance AI respons
 
 The folder organization system helps users manage their conversations in a structured way:
 
-\begin{figure}[p]
+\begin{sidewaysfigure}[p]
     \centering
-    \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio]{./Chapter07/figures/folder_organization_ui.png}
+    \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio]{./Chapter07/figures/folder_organization_ui.PDF}
     \caption{Folder Organization System}
     \label{fig:folder-organization-ui}
-\end{figure}
+\end{sidewaysfigure}
 \clearpage
 
 Key folder organization components include:
@@ -289,12 +289,12 @@ The folder system allows users to categorize and easily retrieve past conversati
 
 State management in the Ollama UI application is implemented using a combination of React's Context API, custom hooks, and React Query. This approach provides a balance between simplicity and powerful state management capabilities.
 
-\begin{figure}[p]
+\begin{sidewaysfigure}[p]
     \centering
-    \includegraphics[width=\textwidth]{./Chapter07/figures/context_provider_hierarchy.png}
+    \includegraphics[width=\textwidth]{./Chapter07/figures/context_provider_hierarchy.PDF}
     \caption{Context Provider Hierarchy}
     \label{fig:context-provider-hierarchy}
-\end{figure}
+\end{sidewaysfigure}
 \clearpage
 
 \subsection{React Context Implementation}
@@ -374,12 +374,12 @@ export const useConversation = () => {
 
 The application integrates with backend APIs using React Query, which provides data fetching, caching, and synchronization:
 
-% \begin{figure}[p]
-%     \centering
-%     \includegraphics[width=\textwidth]{./Chapter07/figures/api_integration_pattern.png}
-%     \caption{Frontend-API Integration Pattern}
-%     \label{fig:api-integration-pattern}
-% \end{figure}
+\begin{sidewaysfigure}[p]
+    \centering
+    \includegraphics[width=\textwidth]{./Chapter07/figures/api_integration_pattern.PDF}
+    \caption{Frontend-API Integration Pattern}
+    \label{fig:api-integration-pattern}
+\end{sidewaysfigure}
 \clearpage
 
 API integration is implemented through service modules that encapsulate API communication:
@@ -427,12 +427,12 @@ Caching is particularly important for model information and conversation history
 
 The Ollama UI application follows modern UI/UX design patterns to provide an intuitive, responsive, and accessible user experience. These patterns ensure consistency across the application and align with user expectations for web applications.
 
-\begin{figure}[p]
+\begin{sidewaysfigure}[p]
     \centering
-    \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio]{./Chapter07/figures/mobile_responsive_views.png}
+    \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio]{./Chapter07/figures/mobile_responsive_views.PDF}
     \caption{Mobile Responsive Views}
     \label{fig:mobile-responsive-views}
-\end{figure}
+\end{sidewaysfigure}
 \clearpage
 
 \subsection{Responsive Design Implementation}
@@ -497,12 +497,12 @@ These error handling patterns ensure that users understand what went wrong and h
 
 The Ollama UI application implements various performance optimization techniques to ensure a responsive and efficient user experience, even when dealing with complex interactions and large datasets.
 
-\begin{figure}[p]
+\begin{sidewaysfigure}[p]
     \centering
-    \includegraphics[width=\textwidth]{./Chapter07/figures/component_lazy_loading.png}
+    \includegraphics[width=\textwidth]{./Chapter07/figures/component_lazy_loading.PDF}
     \caption{Component Lazy Loading Pattern}
     \label{fig:component-lazy-loading}
-\end{figure}
+\end{sidewaysfigure}
 \clearpage
 
 \subsection{Component Lazy Loading}
@@ -599,66 +599,66 @@ Effective cache management significantly improves perceived performance by reduc
 \end{description}
 \end{mdframed}
 
-\begin{figure}[p]
+\begin{sidewaysfigure}[p]
     \centering
-    \includegraphics[width=\textwidth]{./Chapter07/figures/3.png}
+    \includegraphics[width=\textwidth]{./Chapter07/figures/3.PDF}
     \caption{UI Figure 3}
     \label{fig:ui-figure-3}
-\end{figure}
+\end{sidewaysfigure}
 \clearpage
 
-\begin{figure}[p]
+\begin{sidewaysfigure}[p]
     \centering
-    \includegraphics[width=\textwidth]{./Chapter07/figures/4.png}
+    \includegraphics[width=\textwidth]{./Chapter07/figures/4.PDF}
     \caption{UI Figure 4}
     \label{fig:ui-figure-4}
-\end{figure}
+\end{sidewaysfigure}
 \clearpage
 
-\begin{figure}[p]
+\begin{sidewaysfigure}[p]
     \centering
-    \includegraphics[width=\textwidth]{./Chapter07/figures/9.png}
+    \includegraphics[width=\textwidth]{./Chapter07/figures/9.PDF}
     \caption{UI Figure 9}
     \label{fig:ui-figure-9}
-\end{figure}
+\end{sidewaysfigure}
 \clearpage
 
-\begin{figure}[p]
+\begin{sidewaysfigure}[p]
     \centering
-    \includegraphics[width=\textwidth]{./Chapter07/figures/14.png}
+    \includegraphics[width=\textwidth]{./Chapter07/figures/14.PDF}
     \caption{UI Figure 14}
     \label{fig:ui-figure-14}
-\end{figure}
+\end{sidewaysfigure}
 \clearpage
 
-\begin{figure}[p]
+\begin{sidewaysfigure}[p]
     \centering
-    \includegraphics[width=\textwidth]{./Chapter07/figures/15.png}
+    \includegraphics[width=\textwidth]{./Chapter07/figures/15.PDF}
     \caption{UI Figure 15}
     \label{fig:ui-figure-15}
-\end{figure}
+\end{sidewaysfigure}
 \clearpage
 
-\begin{figure}[p]
+\begin{sidewaysfigure}[p]
     \centering
-    \includegraphics[width=\textwidth]{./Chapter07/figures/17.png}
+    \includegraphics[width=\textwidth]{./Chapter07/figures/17.PDF}
     \caption{UI Figure 17}
     \label{fig:ui-figure-17}
-\end{figure}
+\end{sidewaysfigure}
 \clearpage
 
-\begin{figure}[p]
+\begin{sidewaysfigure}[p]
     \centering
-    \includegraphics[width=\textwidth]{./Chapter07/figures/20.png}
+    \includegraphics[width=\textwidth]{./Chapter07/figures/20.PDF}
     \caption{UI Figure 20}
     \label{fig:ui-figure-20}
-\end{figure}
+\end{sidewaysfigure}
 \clearpage
 
-\begin{figure}[p]
+\begin{sidewaysfigure}[p]
     \centering
-    \includegraphics[width=\textwidth]{./Chapter07/figures/21.png}
+    \includegraphics[width=\textwidth]{./Chapter07/figures/21.PDF}
     \caption{UI Figure 21}
     \label{fig:ui-figure-21}
-\end{figure}
+\end{sidewaysfigure}
 \clearpage
