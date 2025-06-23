@@ -46,7 +46,7 @@ pdfauthor
 \newcommand{\tdegree}{BSc.}
 
 % END Of Change This section
-\newcommand{\tReferenceStyle}{IEEEtran}
+\newcommand{\tReferenceStyle}{apalike}
 \input{LaTeX/packages}
 
 % Custom environments
@@ -92,7 +92,7 @@ pdfauthor
 \cleardoublepage
 
 \bibliographystyle{\tReferenceStyle}
-\bibliography{BibTeX/library,BibTeX/comprehensive}
-% \appendix
+\nocite{*}
+\bibliography{BibTeX/library,BibTeX/comprehensive}% \appendix
 % \include{Appendix/MainAppendix}
 \end{document}

@@ -1,0 +1,105 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Users\\Ibrahim\\Desktop\\kfs_fci_project_template\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Users\\Ibrahim\\Desktop\\kfs_fci_project_template\\Chapter06\\Chapter06.tex||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Chapter06\\Chapter06.tex||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 307,
+          "SelectedChildIndex": 12,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Chapter06.tex",
+              "DocumentMoniker": "E:\\Users\\Ibrahim\\Desktop\\kfs_fci_project_template\\Chapter06\\Chapter06.tex",
+              "RelativeDocumentMoniker": "Chapter06\\Chapter06.tex",
+              "ToolTip": "E:\\Users\\Ibrahim\\Desktop\\kfs_fci_project_template\\Chapter06\\Chapter06.tex",
+              "RelativeToolTip": "Chapter06\\Chapter06.tex",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAABeAAAAAAAAAA==",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAeUSURBVFhHpZhbbBzVGcd/58yMZ\u002B/ZxbOOYxw7lyaEOHIs7BAnpKUU8dRKEB7yxAsoEmqhqnjpSy9CKlLVSq1E2rdenlAeQKglqqgi0SAVsJJAYuJcSGpI7E2cteOx2dm1d3fufcCL7Nk1js1f\u002Bks7Z46\u002B73e\u002Bc87M2RFE9Pjjj\u002BvHjx8/cuTIkaeCIHCEENEuKxQEwYrf9XrdPXXq1HsnT568eO3aNXtF57UUhmFTtv7\u002B/o7jx4//\u002BNlnn30lDMMwen81hWGI7/s4jsPs7Gx9bGzs7\u002B\u002B8887rp0\u002Bfvhft\u002B01Sog2bNm3KDgwMHOnv7/8BEBNC3JeBGBDzfV/3fT\u002BZSCR2JRKJjGVZl6amphajeVaTjDaEYSjCMBRCCDZiRVHQNI14PL553759x44dO/bzvr6\u002BfDTPamqqUHt7e2ZwcPBgf3//YaAp4Td5qb8IgkA4jkMymczs2rWrV9O01NTU1KelUqm21ipoCTQ0NHRw//796wZqOAxDarWa0HWd7du3p/P5/F5VVcNisXijUqnUfN9flaoJyDCMzODg4MH9\u002B/cfXms0UTWAgiCgVquhaZrYsmULyWQyvmPHjsfCMDRN0yxYlrXgeV7L4E1AjQoNDAxsqEIsbX/HcfA8D9/3RaVSQVEU2dXV9ZQQYso0zUK5XG4J1QRkGMbXU/ZtKuQ4DoVCgTNnzvDBBx\u002BIkZERisUiXV1dT\u002BVyubumaY6bplmNxmjaZQ0JIZBSrsuNCkkpaWtrI5/Ps3fvXh555BGGhobo7e1FSklXV9eruVzuaDQnq1XowIEDG54yKb8ao5Sysf3JZDK0t7cLwzAwDIN8Pq9Wq9VPi8XiFcuyVlSpZYWiSdZrRVHQdZ1UKoVhGGzevLlh0dnZKXp6ekQ\u002Bn9d1XW\u002BL5m4JxBLURiWlRFVVdF0nkUiQSqW\u002BdjqdJpPJCF3XpWiRZFWg6PrYiBVFQVVVNE2jra0NTdPQNA1d11EUBeD\u002BgKJTsFEjvhqYokhs20ZENopoLlAzUCNYdLRrWyClQEiBokpUVSKlih9I6nUPyyrj\u002Bf5K4BZqAmKdFfqqf4iU4Hohti2oVkMsy2N21uH2nTo3JyzCMGBmZgbf9xvT1VItgRrlXMshIa7jUrIWqSxUKNwO\u002BWw8zr/\u002BXea3v/\u002BI37z2Nv/458dM3o6RTif45JOPsW171eliNSDuo0q2bTM5Ocd775f4wx8TvPRykZ\u002B\u002BPMWrv65z/uw41pfvMjlxkqtXTvP5uIPn2Swu1rg7XcS2Vz9IbhhI0\u002BDO7TZOvK7ieW/iu68TBqeRYh5d38IPf/QcJ06c4JWfPYdjv8sbb7xJZ2cn16/f4MtSadVp2zCQqqqoWoiUc3Tkiwwe2MnTTw8gZYa7d9MEoUG7kad7azdDQzuQioZhGJQti/n5eVzXRS491ZeruWVJUYCoFUUlEfPo2Fxk164eDh36LgeHuwl8hduFNu7NBCwsWEhF8tBDu/n\u002BE09gGB2AoFQqYTvO\u002BoDWkhAKiYRNLnuNubkFjPYOOjp8hLApFiXT0z52fQHf84jFYvT2biOdTqOoKqVSCdd10TQtGrY1kLiP55AQCtmcRl\u002BfguP4uK6DotRJpapUKgH3ZjxqtRqOY2PbdarVRYQQxGJxyuUyvucT0/Wm800T0HrOQNnsAzz22Pc4dOgwYRhStwMMYxFNrTM/72OaAZblUSo52HYN27FJp1LU6w7V6qIIgqBp7zcBNRRdM60spUBVVMIwRAiB70E2Wycer2OaIZcuBZw/X2HskoXruti2TSKRQJEKpmnG5\u002Bbn49G8qwLdj6QUaG0aQeAThi61Gji2AnhcvFDjz3\u002B6xd/\u002B\u002BhYffniS0pcWdt0mmUyiqApbe3q7e3p6tjTFjDYsV7Qiyw0gpUJMbyMELl7weOknVxkZeZs9e37H8PBrdHX9BVX9L7Y9RxCGQMCmXBZV04jpsd5YPN4bzfmNQGtJCImm6QBs2\u002BaTyZxCUT4kla7x6KMDvPjiC/zyV7/g\u002BedfYH7O5OPz53j7rbe4c7uA73s7A9/fHo3Z9Lg0DCMzPDx8cGho6HD0Xiu5rotpmsSTbXQ/mOXg8BB79jxMNpfDcRymi0XGx8eZnJzg3r17TE/PMDs7S6VSUZOJ5Ggspr9/586dr79YfKsKSSnR9Taq1Srm7BxSUalUKhSLdykUCnzxxRdcu/YZly\u002BPceXyFS5eHGX88/8xMXEL05wVD7Q/0Llz53e2rYi5/GK9EkuvkMD3uTx2idGLo5w7d5Zz585y4cInXL16hcnCBJVyhVqtiud5CAGpVJKYrpuu6y44jp1YHrMJSAgRNhbt/UjTNLq7H6TdaKenpwfP87Asi3K5TLlcxnUdUqkUu3fv5sknn\u002BToM0c5\u002BsxRtm7dOjoxMXHm\u002BvXrd5fHU5dfANi27d66das4MjIyRosz72ra19eH4ziMjHykOLaTNYy8qmlqVQhq8Xjcy\u002BfzdHc/SG9vL/F4PLxx48a7n46O/qdQKMwtj9MqoQ60A3mg6W/KGgpz2Vz6oYcfPpLdtCk3MzN9/eatmzetklWK5HKAWWAOWHE4agXEUnvTdK4lsfTlAwiAsBFHSrni09\u002BSGn1W6P\u002B\u002BcCZr4LSWFwAAAABJRU5ErkJggg==",
+              "WhenOpened": "2025-06-20T16:40:40.082Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 19,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 19,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

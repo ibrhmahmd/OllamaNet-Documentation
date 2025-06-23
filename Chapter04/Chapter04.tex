@@ -442,7 +442,8 @@ public class ConversationsController : ControllerBase
     }
     
     [HttpPost]
-    public async Task<ActionResult<ConversationDto>> CreateConversation(CreateConversationDto dto)
+    public async Task<ActionResult<ConversationDto>> CreateConversation
+    (CreateConversationDto dto)
     {
         // Implementation
     }
@@ -708,7 +709,8 @@ private IAsyncPolicy<HttpResponseMessage> GetRetryPolicy()
         .OrResult(msg => msg.StatusCode == System.Net.HttpStatusCode.TooManyRequests)
         .WaitAndRetryAsync(
             retryCount: 3,
-            sleepDurationProvider: retryAttempt => TimeSpan.FromSeconds(Math.Pow(2, retryAttempt))
+            sleepDurationProvider: retryAttempt =>
+            TimeSpan.FromSeconds(Math.Pow(2, retryAttempt)),
         );
 }
 \end{verbatim}
